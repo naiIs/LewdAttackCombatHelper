@@ -1,0 +1,36 @@
+th {
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+input[type='number']{
+    width: 70px;
+}
+
+input[type='text']{
+    width: 70px;
+}
+
+input[type='text'].nameField {
+    width: 150px;
+}
+
+.float-container {
+    display: flex;
+}
+
+textarea {
+    resize: none;
+}
+
+select.enemyList {
+    height: 450px;
+}
+
+.combatLog {
+    width: 90%;
+}

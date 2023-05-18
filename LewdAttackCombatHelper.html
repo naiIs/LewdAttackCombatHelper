@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <title>Lewd Attack Combat Helper</title>
+    <body>
+
+        <div class="float-container">
+
+            <div class="float-child" width="400">
+                <h1>Your Character</h1>
+                Name: <input id="characterName" class="nameField" type="text" disabled="true">
+                <table id="stats">
+                    <tr>
+                        <th>HP</th>
+                        <td><input id="hitPoints" type="text" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Armor</th>
+                        <td><input id="armor" type="text" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Stamina</th>
+                        <td><input id="stamina" type="text" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Sanity</th>
+                        <td><input id="sanity" type="text" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Lust</th>
+                        <td><input id="lust" type="text" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Attack</th>
+                        <td><input id="attack" type="number" min="0" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Attack Proficiency</th>
+                        <td><input id="attackProf" type="number" min="0" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Damage</th>
+                        <td><input id="damage" type="number" min="0" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Defense</th>
+                        <td><input id="defense" type="number" min="0" value="0" disabled="true"></td>
+                    </tr>
+                    <tr>
+                        <th>Defense Proficiency</th>
+                        <td><input id="defenseProf" type="number" min="0" value="0" disabled="true"></td>
+                    </tr>                    
+                </table>
+                <select id="armorSelect" disabled="true">
+                    <option value="unarmored"></option>
+                    <option value="ironPlate">Iron Plate</option>
+                    <option value="ironBreastplate">Iron Breastplate</option>
+                    <option value="ironBikini">Iron Bikini</option>
+                    <option value="steelPlate">Steel Plate</option>
+                    <option value="steelBreastplate">Steel Breastplate</option>
+                    <option value="steelBikini">Steel Bikini</option>
+                    <option value="paddedSuit">Padded Suit</option>
+                    <option value="paddedJacket">Padded Jacket</option>
+                    <option value="clothStrips">Cloth Strips</option>
+                    <option value="leatherJacket">Leather Suit</option>
+                    <option value="leatherStrips">Leather Strips</option>
+                    <option value="priestRobe">Priestly Robe</option>
+                </select>
+                <button id="editStats" type="button">Edit Stats</button>
+            </div>
+
+            <div class="float-child">
+                <textarea id="combatLog" class="combatLog" rows="40" cols="50" disabled="true"></textarea>
+                <br>
+                <button id="fight" type="button">Fight!</button>
+            </div>
+
+            <div class="float-child">
+                <h1>Enemies</h1>
+                <select id="enemyList" class="enemyList" multiple></select>
+                <select id="enemySelect" class="enemyList" multiple disabled="true">
+                    <option value="bandit" onclick="addEnemyToArray(this.value)">Bandit</option>
+                    <option value="banditLeader" onclick="addEnemyToArray(this.value)">Bandit Leader</option>
+                    <option value="wyvern" onclick="addEnemyToArray(this.value)">Wyvern</option>
+                    <option value="goblin" onclick="addEnemyToArray(this.value)">Goblin</option>
+                </select>
+                <br>
+                <button id="addEnemy" type="button">Add Enemies</button><button id="clearEnemies" type="button" disabled="true">Clear Enemies</button>
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
